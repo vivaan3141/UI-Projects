@@ -6,7 +6,7 @@ from tkinter import ttk
 
 root = tk.Tk()
 root.title("Currency Converter")
-root.geometry("280x200")
+root.geometry("280x240")
 
 
 
@@ -173,8 +173,19 @@ currency_data = {
     "YER": "Yemeni Rial",
     "ZAR": "South African Rand",
     "ZMW": "Zambian Kwacha",
-    "ZWL": "Zimbabwean Gold (ZiG)"
+    "ZWL": "Zimbabwean Gold (ZiG)",
+    "BTC": "Bitcoin (Global Digital Asset)",
+    "ETH": "Ethereum (Global Digital Asset)",
+    "BNB": "Binance (Global Digital Asset)",
+    "XRP": "Ripple (Global Digital Asset)",
+    "SOL": "Solana (Global Digital Asset)",
+    "DOT": "Polkadot (Global Digital Asset)",
+    "AVAX": "Avalanche (Global Digital Asset)",
+    "MATIC": "Polygon (Global Digital Asset)",
+    "LTC": "Litecoin (Global Digital Asset)",
+    "ADA": "Cardano (Global Digital Asset)"
 }
+
 
 def openList():
     global look
@@ -427,8 +438,9 @@ def showVal(event=None):
 
     rate = get(c1, c2, key)
     amo = float(am.get())
-    print((type(am.get()).__name__))
-    label.config(text=f"{amo} {c1} = {amo*rate} {c2}",fg="black")
+    #print((type(am.get()).__name__))
+    label.config(text=f"{amo} {c1} = {amo*rate} {c2}")
+    print(f"{amo} {c1} = {amo*rate} {c2}")
 
 
     #if ((type(amo).__name__)=="float"):
